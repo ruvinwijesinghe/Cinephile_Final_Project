@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1023885441646",
+    "project_id": "cinephile2-33b7a",
+    "storage_bucket": "cinephile2-33b7a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023885441646:android:768b2a29fb9fa17264847f",
+        "android_client_info": {
+          "package_name": "com.finalproject.cinephile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023885441646-rvr0h65eu5t04f6mntpk6h5f9ci9s499.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQPwJYVo1zoDHwa1uejgB8wMTckD3S-oM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023885441646-rvr0h65eu5t04f6mntpk6h5f9ci9s499.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

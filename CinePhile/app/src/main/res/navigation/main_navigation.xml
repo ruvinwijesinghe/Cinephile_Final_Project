@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/menu_movie">
+    <fragment
+        android:id="@+id/menu_movie"
+        android:name="com.finalproject.cinephile.ui.home.MoviesFragment"
+        android:label="fragment_movie"
+        tools:layout="@layout/fragment_movies">
+        <action
+            android:id="@+id/action_fragment_movie_to_movie_detail"
+            app:destination="@id/movieDetailActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu_tv_show"
+        android:name="com.finalproject.cinephile.ui.home.TvShowFragment"
+        android:label="TvShowFragment"
+        tools:layout="@layout/fragment_tv_show">
+        <action
+            android:id="@+id/action_tvShowFragment_to_tvShowDetailActivity"
+            app:destination="@id/tvShowDetailActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/recentSearchFragment"
+        android:name="com.finalproject.cinephile.ui.search.RecentSearchFragment"
+        android:label="fragment_recent_search"
+        tools:layout="@layout/fragment_recent_search" />
+    <activity
+        android:id="@+id/movieDetailActivity"
+        android:name="com.finalproject.cinephile.ui.detail.MovieDetailsActivity"
+        android:label="MovieDetailActivity"
+        tools:layout="@layout/activity_movie_detail">
+        <argument
+            android:name="movie_id"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </activity>
+    <activity
+        android:id="@+id/tvShowDetailActivity"
+        android:name="com.finalproject.cinephile.ui.detail.TvShowDetailsActivity"
+        android:label="TvShowDetailActivity"
+        tools:layout="@layout/activity_tv_detail">
+        <argument
+            android:name="tv_id"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </activity>
+    <fragment
+        android:id="@+id/menu_favorite"
+        android:name="com.finalproject.cinephile.ui.favorite.FavoriteFragment"
+        android:label="FavoriteFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_favoriteFragment_to_movieDetailActivity"
+            app:destination="@id/movieDetailActivity" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_tvShowDetailActivity"
+            app:destination="@id/tvShowDetailActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu_setting"
+        android:name="com.finalproject.cinephile.ui.home.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+</navigation>

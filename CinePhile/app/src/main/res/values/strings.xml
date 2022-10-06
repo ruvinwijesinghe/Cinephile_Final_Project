@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Cinephile</string>
+
+    <string name="poster_content">Poster</string>
+    <string name="movies_tab">Movies</string>
+    <string name="tv_shows_tab">TV Shows</string>
+    <string name="overview">Plot Summary</string>
+    <string name="rating_ex" translatable="false">5.5</string>
+    <string name="genre_ex">Horror, Fiction</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="trailers">Trailers</string>
+    <string name="icStar">icStar</string>
+    <string name="image_before_loading">image before loading</string>
+    <string name="favorite">Favorite</string>
+    <string name="trailer_title">Trailer Title</string>
+    <string name="similar">You may also like</string>
+    <string name="popular">Popular</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="search">Search</string>
+
+    <string name="release_reminder_title">Today Release Reminder</string>
+    <string name="release_reminder_description">Reminder showing the movie that released today</string>
+    <string name="daily_reminder_title">Daily Reminder</string>
+    <string name="daily_reminder_description">Reminder for return to app</string>
+    <string name="setting">Setting</string>
+    <string name="setting_language">Language Setting</string>
+    <string name="appwidget_text">Your favorite movies banner</string>
+    <string name="empty_text">Field are empty</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="default_notification_channel_name" translatable="false">Daily Reminder</string>
+    <string name="new_movie">New movie</string>
+    <string name="new_movies"> new movies</string>
+    <string name="new_released_movies">New Released Movies</string>
+    <string name="release_reminder_enabled">Today Release Reminder enabled</string>
+    <string name="release_reminder_disabled">Today Release Reminder disabled</string>
+    <string name="daily_reminder_enabled">Daily reminder enabled</string>
+    <string name="daily_reminder_disabled">Daily reminder disabled</string>
+    <string name="add_favorite_movie">added to favorite movies</string>
+    <string name="delete_favorite_movie">deleted from favorite movies</string>
+    <string name="search_title">Search: </string>
+    <string name="add_favorite_tv">added to favorite tv shows</string>
+    <string name="delete_favorite_tv">deleted from favorite tv shows</string>
+    <string name="empty_list">The list is still empty</string>
+    <string name="popular_desc">Most popular movies</string>
+    <string name="top_rated_desc">Highest rated movies of all time</string>
+    <string name="now_playing_desc">The list of movies in theater</string>
+    <string name="popular_tv_desc">Most popular tv shows</string>
+    <string name="top_rated_tv_desc">Highest rated tv shows of all time</string>
+    <string name="on_the_air">On The Air</string>
+    <string name="on_the_air_desc">The list of tv shows on the air</string>
+    <string name="cast">Cast \&amp; Credits</string>
+    <string name="undo">Undo</string>
+    <string name="seasons" translatable="false">Seasons</string>
+    <string name="per_10" translatable="false">/10</string>
+    <string name="not_available" translatable="false">N/A</string>
+    <string name="metascore" translatable="false">Metascore</string>
+    <string name="app_version">1.0.0</string>
+    <string name="tmdb_logo">TMDB Logo</string>
+
+</resources>

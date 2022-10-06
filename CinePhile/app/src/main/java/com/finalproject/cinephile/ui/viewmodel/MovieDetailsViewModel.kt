@@ -1,0 +1,31 @@
+package com.finalproject.cinephile.ui.viewmodel
+
+import androidx.hilt.Assisted
+import androidx.hilt.lifecycle.ViewModelInject
+import androidx.lifecycle.*
+import com.finalproject.cinephile.data.Repository
+import com.finalproject.cinephile.data.model.Movie
+import com.finalproject.cinephile.data.vo.Resource
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+
+class MovieDetailsViewModel @ViewModelInject constructor(
+    private val repository: Repository,
+    @Assisted private val savedStateHandle: SavedStateHandle
+) : ViewModel() {
+
+    private var movieId = savedStateHandle[MOVIE_ID_KEY] ?: 0
+
+    val movieDetails: LiveData<Resource<Movie>> by lazy {
+        repository.getMovieDetails(movieId)
+    }
+
+    val isFavorites: LiveData<Boolean> = liveData {
+        emit(repository.isFavoriteMovie(movieId))
+    }
+
+    companion object {
+        const val TAG = "MovieDetailsVM"
+        const val MOVIE_ID_KEY = "MOVIE_ID"
+    }
+}

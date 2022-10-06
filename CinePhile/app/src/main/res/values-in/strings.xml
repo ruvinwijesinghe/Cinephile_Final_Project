@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="poster_content">Poster</string>
+    <string name="movies_tab">Film</string>
+    <string name="tv_shows_tab">Acara TV</string>
+    <string name="overview">Ringkasan</string>
+    <string name="genre_ex">Horor, Fiksi</string>
+    <string name="movie_title">Judul Film</string>
+    <string name="trailers">Cuplikan Video</string>
+    <string name="icStar">icStar</string>
+    <string name="image_before_loading">Gambar sebelum memuat</string>
+    <string name="favorite">Favorit</string>
+    <string name="trailer_title">Judul Cuplikan Video</string>
+    <string name="similar">Mungkin anda akan suka</string>
+    <string name="popular">Populer</string>
+    <string name="top_rated">Rating tertinggi</string>
+    <string name="now_playing">Sedang tayang</string>
+    <string name="search">Pencarian</string>
+
+    <string name="release_reminder_title">Pengingat Rilis Hari Ini</string>
+    <string name="release_reminder_description">Pengingat menunjukkan film yang dirilis hari ini</string>
+    <string name="daily_reminder_title">Pengingat Harian</string>
+    <string name="daily_reminder_description">Pengingat anda untuk kembali ke aplikasi ini setiap harinya</string>
+    <string name="setting">Pengaturan</string>
+    <string name="setting_language">Pengaturan Bahasa</string>
+    <string name="appwidget_text">Poster film favorit anda</string>
+    <string name="empty_text">Field kosong</string>
+    <string name="new_movie">Film baru</string>
+    <string name="new_movies"> film baru</string>
+    <string name="new_released_movies">Film Baru Dirilis</string>
+    <string name="release_reminder_enabled">Pengingat Rilis Hari Ini diaktifkan</string>
+    <string name="release_reminder_disabled">Pengingat Rilis Hari Ini dimatikan</string>
+    <string name="daily_reminder_enabled">Pengingat Harian diaktifkan</string>
+    <string name="daily_reminder_disabled">Pengingat Harian dimatikan</string>
+    <string name="add_favorite_movie">ditambahkan ke Film favorit</string>
+    <string name="delete_favorite_movie">dihapus dari Film favorit</string>
+    <string name="search_title">Pencarian: </string>
+    <string name="add_favorite_tv">ditambahkan ke Serial TV favorit</string>
+    <string name="delete_favorite_tv">dihapus dari Serial TV favorit</string>
+    <string name="empty_list">Daftar masih kosong</string>
+    <string name="popular_desc">Film terpopuler sepanjang masa</string>
+    <string name="top_rated_desc">Film dengan rating tertinggi</string>
+    <string name="now_playing_desc">Film yang sedang tayang di bioskop</string>
+    <string name="popular_tv_desc">Serial tv terpopuler sepanjang masa</string>
+    <string name="top_rated_tv_desc">Serial tv dengan rating tertinggi</string>
+    <string name="on_the_air">Sedang tayang</string>
+    <string name="on_the_air_desc">Daftar serial TV yang sedang tayang di televisi</string>
+    <string name="cast">Pemain</string>
+    <string name="undo">Urungkan</string>
+    <string name="app_version">1.0.0</string>
+    <string name="tmdb_logo">Logo TMDB</string>
+
+</resources>

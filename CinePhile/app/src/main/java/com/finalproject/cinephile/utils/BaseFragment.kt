@@ -1,0 +1,47 @@
+package com.finalproject.cinephile.utils
+
+import android.view.View
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.AsyncListDiffer
+import com.facebook.shimmer.ShimmerFrameLayout
+import com.google.android.material.snackbar.Snackbar
+import com.finalproject.cinephile.R
+import com.finalproject.cinephile.data.vo.Resource
+import com.finalproject.cinephile.data.vo.Status
+
+open class BaseFragment : Fragment() {
+
+
+    fun showMessageSnackbar(msg: String) {
+        Snackbar.make(requireView(), msg, Snackbar.LENGTH_SHORT)
+            .show()
+    }
+
+    private fun hideShimmer(container: ShimmerFrameLayout) {
+        container.hideShimmer()
+        container.visibility = View.GONE
+    }
+
+    fun <R, D> handleResponseResult(
+        resource: Resource<R>,
+        list: List<D>,
+        differ: AsyncListDiffer<D>,
+        shimmerContainer: ShimmerFrameLayout
+    ) {
+        resource.data?.let { }
+        when (resource.status) {
+            Status.SUCCESS -> {
+                resource.data?.let {
+                    differ.submitList(list)
+                    hideShimmer(shimmerContainer)
+                }
+            }
+            Status.ERROR -> {
+                showMessageSnackbar(resource.message!!)
+                hideShimmer(shimmerContainer)
+            }
+            Status.LOADING -> shimmerContainer.startShimmer()
+        }
+    }
+}
