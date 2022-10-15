@@ -12,6 +12,12 @@ import com.finalproject.cinephile.data.vo.Status
 
 open class BaseFragment : Fragment() {
 
+    fun showActionSnackbar(msg: Int, actionName: Int, actionListener: View.OnClickListener) {
+        Snackbar.make(requireView(), msg, Snackbar.LENGTH_SHORT)
+            .setAction(actionName, actionListener)
+            .setActionTextColor(ContextCompat.getColor(requireContext(), R.color.colorAccent))
+            .show()
+    }
 
     fun showMessageSnackbar(msg: String) {
         Snackbar.make(requireView(), msg, Snackbar.LENGTH_SHORT)

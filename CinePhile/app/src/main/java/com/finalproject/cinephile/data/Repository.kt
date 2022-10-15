@@ -25,15 +25,14 @@ class Repository @Inject constructor(
         remoteRepository.getMovies(category)
     }
 
-    override fun searchMovies(query: String): LiveData<Resource<MovieResponse>> {
-        TODO("Not yet implemented")
-    }
-
     override fun getMovieDetails(movieId: Int): LiveData<Resource<Movie>> = performGetOperation {
         remoteRepository.getMovieDetails(movieId)
     }
 
-
+    override fun searchMovies(query: String): LiveData<Resource<MovieResponse>> =
+        performGetOperation {
+            remoteRepository.searchMovies(query)
+        }
 
     override fun getNewReleaseMovies(): LiveData<MovieResponse> {
         val response = MutableLiveData<MovieResponse>()
@@ -52,15 +51,12 @@ class Repository @Inject constructor(
     override fun getTvShows(category: String): LiveData<Resource<TvShowResponse>> =
         performGetOperation { remoteRepository.getTvShows(category) }
 
-    override fun searchTvShows(query: String): LiveData<Resource<TvShowResponse>> {
-        TODO("Not yet implemented")
-    }
-
     override fun getTvShowDetails(tvShowId: Int): LiveData<Resource<TvShow>> = performGetOperation {
         remoteRepository.getTvDetail(tvShowId)
     }
 
-
+    override fun searchTvShows(query: String): LiveData<Resource<TvShowResponse>> =
+        performGetOperation { remoteRepository.searchTvShows(query) }
 
     override fun getNewReleaseTvShows(): LiveData<TvShowResponse> {
         val response = MutableLiveData<TvShowResponse>()

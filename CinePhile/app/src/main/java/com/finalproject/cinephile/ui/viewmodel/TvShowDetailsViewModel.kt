@@ -20,10 +20,16 @@ class TvShowDetailsViewModel @ViewModelInject constructor(
         repository.getTvShowDetails(tvShowId)
     }
 
+    //    private val _isFavorites = MutableLiveData<Boolean>()
     val isFavorites: LiveData<Boolean> = liveData {
         emit(repository.isFavoriteMovie(tvShowId))
     }
-
+//
+//    private fun checkMovieFavorite() {
+//        viewModelScope.launch(Dispatchers.IO) {
+//            _isFavorites.postValue(repository.isFavoriteTvShow(tvShowId))
+//        }
+//    }
 
     fun addFavoriteTvShow(tvShow: TvShow) = viewModelScope.launch(Dispatchers.IO) {
         repository.addFavoriteTvShow(tvShow)

@@ -26,6 +26,9 @@ class RemoteRepository @Inject constructor(
         tmdbAPI.getMovieDetails(id)
     }
 
+    suspend fun searchMovies(query: String) = getResponseResult {
+        tmdbAPI.searchMovies(query)
+    }
 
     fun getNewReleaseMovies(callback: LoadDataCallback<MovieResponse>) {
         val date = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
@@ -58,6 +61,10 @@ class RemoteRepository @Inject constructor(
 
     suspend fun getTvDetail(id: Int): Resource<TvShow> = getResponseResult {
         tmdbAPI.getTvShowDetails(id)
+    }
+
+    suspend fun searchTvShows(query: String): Resource<TvShowResponse> = getResponseResult {
+        tmdbAPI.searchTvShows(query)
     }
 
     fun getNewReleaseTvShows(callback: LoadDataCallback<TvShowResponse>) {

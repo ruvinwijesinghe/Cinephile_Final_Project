@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/bg_nav_header"
     android:padding="40dp"
+
     android:orientation="vertical">
 
 

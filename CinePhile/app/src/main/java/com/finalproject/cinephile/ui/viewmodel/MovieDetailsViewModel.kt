@@ -24,6 +24,14 @@ class MovieDetailsViewModel @ViewModelInject constructor(
         emit(repository.isFavoriteMovie(movieId))
     }
 
+    fun addFavoriteMovie(movie: Movie) = viewModelScope.launch(Dispatchers.IO) {
+        repository.addFavoriteMovie(movie)
+    }
+
+    fun deleteFavMovie(movie: Movie) = viewModelScope.launch(Dispatchers.IO) {
+        repository.removeFavoriteMovie(movie)
+    }
+
     companion object {
         const val TAG = "MovieDetailsVM"
         const val MOVIE_ID_KEY = "MOVIE_ID"

@@ -17,6 +17,14 @@ class SearchViewModel @ViewModelInject constructor(
 
     private var query = savedStateHandle[SEARCH_QUERY_KEY] ?: ""
 
+    val searchMovies: LiveData<Resource<MovieResponse>> by lazy {
+        repository.searchMovies(query)
+    }
+
+    val searchTvShows: LiveData<Resource<TvShowResponse>> by lazy {
+        repository.searchTvShows(query)
+    }
+
     companion object {
         const val TAG = "SearchVM"
         const val SEARCH_QUERY_KEY = "SEARCH_QUERY"

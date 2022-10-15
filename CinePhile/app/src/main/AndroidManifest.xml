@@ -20,10 +20,20 @@
         <activity android:name="com.finalproject.cinephile.ui.newRelease.NewReleaseActivity" />
         <activity android:name="com.finalproject.cinephile.ui.MainActivity" />
 
+        <receiver android:name="com.finalproject.cinephile.widget.FavoriteMovieWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
 
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/favorite_image_widget_info" />
+        </receiver>
+        <receiver
+            android:name="com.finalproject.cinephile.notification.ReminderReceiver"
+            android:enabled="true" />
 
-
-
+        <activity android:name="com.finalproject.cinephile.ui.search.SearchActivity" />
         <activity android:name="com.finalproject.cinephile.ui.detail.MovieDetailsActivity" />
         <activity android:name="com.finalproject.cinephile.ui.detail.TvShowDetailsActivity" />
         <activity android:name="com.finalproject.cinephile.SignInActivity">
@@ -36,6 +46,9 @@
         </activity>
         <activity android:name="com.finalproject.cinephile.SignUpActivity"/>
 
+        <service
+            android:name="com.finalproject.cinephile.widget.StackWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
     </application>
 
 </manifest>

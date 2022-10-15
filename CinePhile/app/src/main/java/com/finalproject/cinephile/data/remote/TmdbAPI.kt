@@ -43,6 +43,18 @@ interface TmdbAPI {
         @Query("api_key") apiKey: String = TMDB_API_KEY
     ): Response<TvShow>
 
+    @GET("search/movie")
+    suspend fun searchMovies(
+        @Query("query") query: String,
+        @Query("api_key") apiKey: String = TMDB_API_KEY
+    ): Response<MovieResponse>
+
+    @GET("search/tv")
+    suspend fun searchTvShows(
+        @Query("query") query: String,
+        @Query("api_key") apiKey: String = TMDB_API_KEY
+    ): Response<TvShowResponse>
+
     @GET("discover/movie")
     fun getNewReleaseMovies(
         @Query("primary_release_date.gte") startDate: String,

@@ -1,4 +1,5 @@
 package com.finalproject.cinephile.adapter
+
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
