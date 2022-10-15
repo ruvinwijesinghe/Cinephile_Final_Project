@@ -26,7 +26,7 @@ interface DataSource {
 
     fun getTvShowDetails(tvShowId: Int): LiveData<Resource<TvShow>>
 
- 
+    fun getSeasonDetails(tvId: Int, seasonNumber: Int): LiveData<Season>
 
     fun getFavoriteMovies(): LiveData<List<Movie>>
 
