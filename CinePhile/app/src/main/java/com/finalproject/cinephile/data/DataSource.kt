@@ -12,7 +12,7 @@ import com.finalproject.cinephile.data.vo.Resource
 interface DataSource {
     fun getMovies(category: String): LiveData<Resource<MovieResponse>>
 
-    fun searchMovies(query: String): LiveData<Resource<MovieResponse>>
+    
 
     fun getNewReleaseMovies(): LiveData<MovieResponse>
 
