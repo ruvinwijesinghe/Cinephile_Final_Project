@@ -18,7 +18,7 @@ interface DataSource {
 
     fun getMovieDetails(movieId: Int): LiveData<Resource<Movie>>
 
-    fun getTvShows(category: String): LiveData<Resource<TvShowResponse>>
+    
 
     fun searchTvShows(query: String): LiveData<Resource<TvShowResponse>>
 
