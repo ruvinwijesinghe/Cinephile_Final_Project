@@ -13,6 +13,7 @@ import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import com.finalproject.cinephile.R
 import com.finalproject.cinephile.ui.MainActivity
+import kotlin.math.log
 
 class DailyReminderService : FirebaseMessagingService() {
     override fun onNewToken(s: String) {
@@ -25,7 +26,10 @@ class DailyReminderService : FirebaseMessagingService() {
         if (remoteMessage.notification != null) {
             sendNotification(remoteMessage.notification!!.body)
         }
+
+
     }
+
 
     private fun sendNotification(messageBody: String?) {
         val channelId = getString(R.string.default_notification_channel_id)
@@ -54,6 +58,7 @@ class DailyReminderService : FirebaseMessagingService() {
         val notification = notificationBuilder.build()
         mNotificationManager.notify(0, notification)
     }
+
 
     companion object {
         const val TAG = "MovieCatalogueFMS"
